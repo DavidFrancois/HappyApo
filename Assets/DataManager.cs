@@ -43,8 +43,6 @@ public class DataManager : MonoBehaviour {
         var item = inventory.Find(i => i._name.Equals(key));
         if (item != null) item._quantity += quantity;
         else inventory.Add(new Item(key, quantity));
-        Debug.Log(inventory.Find(i => i._name.Equals(key))._quantity);
-
     }
 
     // Use this for initialization
