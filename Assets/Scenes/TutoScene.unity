@@ -287,10 +287,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 769409714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3288f1b84b994a54999ff1d84f73cc9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e9a1d1a47c49444db431e37f3e9101f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 2
+  newLevel: TestScene
 --- !u!61 &769409716
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 2120897767}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
