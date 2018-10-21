@@ -3,9 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+ class Item {
+    public string _name;
+    public int _quantity;
+
+    public Item(string name, int quantity)
+    {
+        _name = name;
+        _quantity = quantity;
+    }
+
+}
+
 public class DataManager : MonoBehaviour {
 
     public static DataManager dataManager;
+
+    static List<Item> inventory = new List<Item>();
 
     bool gameStart;
 
@@ -13,9 +27,24 @@ public class DataManager : MonoBehaviour {
     {
         if (!gameStart) {
             dataManager = this;
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync("TutoScene");
             gameStart = true;
         }
+    }
+
+
+    public void UnloadScene(string scene) {
+        SceneManager.UnloadSceneAsync(scene);
+    }
+
+    public void addItem(string key, int quantity)
+    {
+       
+        var item = inventory.Find(i => i._name.Equals(key));
+        if (item != null) item._quantity += quantity;
+        else inventory.Add(new Item(key, quantity));
+        Debug.Log(inventory.Find(i => i._name.Equals(key))._quantity);
+
     }
 
     // Use this for initialization

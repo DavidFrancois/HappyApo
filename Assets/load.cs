@@ -11,7 +11,7 @@ public class load : MonoBehaviour {
     {
         if (collider.CompareTag("Player"))
         {
-            SceneManager.LoadScene(newLevel);
+            SceneManager.LoadSceneAsync(newLevel);
         }
 
     }
