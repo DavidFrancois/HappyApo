@@ -3,18 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class move : MonoBehaviour
+{
 
-	public void PlayGame()
-	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    public Animator anim;
+    public float speed = 8f;
 
-	}
 
-	public void QuitGame()
-	{
-		Application.Quit();
-	}
-	
+    // Use this for initialization
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        float x = Input.GetAxis("Horizontal");
+        anim.SetFloat("speed", Mathf.Abs(x));
+
+        if (x > 0)
+        {
+            transform.Translate(x * speed * Time.deltaTime, 0, 0);
+        }
+        if (x < 0)
+        {
+            transform.Translate(-x * speed * Time.deltaTime, 0, 0);
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+    }
 }
