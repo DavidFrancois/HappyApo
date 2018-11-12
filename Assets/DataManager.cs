@@ -27,7 +27,7 @@ public class DataManager : MonoBehaviour {
     {
         if (!gameStart) {
             dataManager = this;
-            SceneManager.LoadSceneAsync("TutoScene");
+            SceneManager.LoadSceneAsync("Game");
             gameStart = true;
         }
     }

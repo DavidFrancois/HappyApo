@@ -8,16 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Persistent.unity
-    guid: c49c3b53ec4683c4e9b1a6e57c4c4002
+    guid: a1b9b0e63a2c56b47840ab45504b6e69
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Game.unity
+    guid: 540082924e2c2994eafdd1f4406941df
   - enabled: 1
     path: Assets/Scenes/TutoScene.unity
     guid: 4b733a02d0173ef4ca5634441c0f68f1
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 1d1459e137d4be641a3ec7140471269f
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
