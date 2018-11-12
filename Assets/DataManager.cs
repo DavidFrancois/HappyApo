@@ -37,6 +37,10 @@ public class DataManager : MonoBehaviour {
         SceneManager.UnloadSceneAsync(scene);
     }
 
+    public int getItem(string key) {
+        return inventory.Find(i => i._name.Equals(key))._quantity;
+    }
+
     public void addItem(string key, int quantity)
     {
        

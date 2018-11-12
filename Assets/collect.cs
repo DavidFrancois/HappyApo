@@ -11,5 +11,6 @@ public class collect : MonoBehaviour {
     
         if (!collider.CompareTag("Player")) return;
         DataManager.dataManager.addItem(key, quantity);
+        Debug.Log(DataManager.dataManager.getItem(key));
     }
 }
